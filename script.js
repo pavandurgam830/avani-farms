@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Show button when scrolling
 window.onscroll = function () {
     scrollFunction();
@@ -272,7 +272,7 @@ const menuToggle = document.getElementById("menu-toggle");
 menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 });
-=======
+
 // Show button when scrolling
 window.onscroll = function () {
     scrollFunction();
@@ -295,4 +295,4 @@ function topFunction() {
         behavior: "smooth"
     });
 }
->>>>>>> c0ca5b0f7707446b474180fe505083a04e704f11
+
