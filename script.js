@@ -24,9 +24,12 @@ function topFunction() {
 
 
 const sections = document.querySelectorAll("section");
+const navMenu = document.getElementById("nav-links");
 const navLinks = document.querySelectorAll(".nav-links a");
+const menuToggle = document.getElementById("menu-toggle");
 
 window.addEventListener("scroll", () => {
+
 
     let current = "";
 
@@ -267,32 +270,36 @@ counters.forEach(counter => {
 
 // ================= MOBILE MENU =================
 
-const menuToggle = document.getElementById("menu-toggle");
 
 menuToggle.addEventListener("click", () => {
-    navLinks.classList.toggle("active");
+    navMenu.classList.toggle("active");
 });
 
-// Show button when scrolling
-window.onscroll = function () {
-    scrollFunction();
-};
-
-function scrollFunction() {
-    let button = document.getElementById("topBtn");
-
-    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
-        button.style.display = "block";
-    } else {
-        button.style.display = "none";
-    }
-}
-
-// Scroll to top
-function topFunction() {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
+navLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        navMenu.classList.remove("active");
     });
-}
+});
+
+window.addEventListener("load", () => {
+    const preloader = document.getElementById("preloader");
+
+    setTimeout(() => {
+        preloader.classList.add("hide");
+        document.body.classList.add("loaded");
+    }, 1200);
+});
+
+
+
+/*if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+        navigator.serviceWorker.register("sw.js")
+            .then(() => console.log("Service Worker Registered"))
+            .catch(err => console.log(err));
+    });
+}*/
+
+
+
 
