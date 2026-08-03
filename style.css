@@ -1260,6 +1260,61 @@ section {
     display: none;
 }
 
+.contact {
+    padding: 80px 10%;
+    background: #f8fff8;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 40px;
+    color: darkgreen;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    color: #666;
+    margin-bottom: 50px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-form {
+    flex: 1.5;
+}
+
+.info-box {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, .08);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.info-box h3 {
+    color: darkgreen;
+    margin-bottom: 10px;
+}
+
+.info-box a {
+    color: #333;
+    text-decoration: none;
+}
+
+.info-box a:hover {
+    color: green;
+}
+
 @media (max-width:768px) {
 
     .navbar {
@@ -1500,7 +1555,13 @@ section {
         display: block;
     }
 
+    .contact-container {
+        flex-direction: column;
+    }
 
-
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
 
 }
